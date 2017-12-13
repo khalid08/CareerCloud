@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CareerCloud.Pocos
 {
-     public class ApplicantResumesPoco
+    [Table("Applicant_Resume")]
+    public class ApplicantResumesPoco
     {
         [Key]
         public Guid Id { get; set; }
