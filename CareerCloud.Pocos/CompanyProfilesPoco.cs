@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 namespace CareerCloud.Pocos
 {
     [Table("Company_Profiles")]
-    public class CompanyProfilesPoco
+    public class CompanyProfilesPoco : IPoco
     {
         [Key]
         public Guid Id { get; set; }
-        [Column("REgistration_Date")]
+        [Column("Registration_Date")]
         public DateTime RegistrationDate { get; set; }
         [Column("Company_Website")]
         public String CompanyWebsite { get; set; }

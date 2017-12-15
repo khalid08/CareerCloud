@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace CareerCloud.Pocos
 {
     [Table("Applicant_Skills")]
-    public class ApplicantSkilsPoco
+    public class ApplicantSkilsPoco: IPoco
     {
         [Key]
         public Guid Id { get; set; }
@@ -18,13 +18,13 @@ namespace CareerCloud.Pocos
         [Column("Skill_Level")]
         public String SkillLevel { get; set; }
         [Column("Start_Month")]
-        public Byte StartMonth { get; set; }
+        public Byte? StartMonth { get; set; }
         [Column("Start_Year")]
         public Int32 StartYear { get; set; }
         [Column("End_Month")]
-        public Byte EndMonth { get; set; }
+        public Byte? EndMonth { get; set; }
         [Column("End_Year")]
-        public Int32 EndYear { get; set; }
+        public Int32? EndYear { get; set; }
         [Column("Time_Stamp")]
         public Byte[] TimeStamp { get; set; }
        
