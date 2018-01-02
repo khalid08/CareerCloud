@@ -67,6 +67,7 @@
     <Compile Include="SecurityLoginsRoleRepository.cs" />
     <Compile Include="SecurityRoleRepository.cs" />
     <Compile Include="SystemCountryCodeRepository.cs" />
+    <Compile Include="SystemLanguageCodeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
