@@ -122,12 +122,12 @@ namespace CareerCloud.ADODataAccessLayer
                 cmd.Connection = conn;
                 foreach (var poco in items)
                 {
-                    cmd.CommandText = @"UPDATE [dbo].[Company_Descriptions]
-                                       SET [Id] = <Id
-                                          ,[Company] = @Company
-                                          ,[LanguageID] = @LanguageId
-                                          ,[Company_Name] = @CompanyName
-                                          ,[Company_Description] = @CompanyDescription
+                    cmd.CommandText = @"UPDATE [dbo].[Security_Logins_Log]
+                                   SET [Id] = @Id
+                                      ,[Login] = @Login
+                                      ,[Source_IP] = @SourceIP
+                                      ,[Logon_Date] = @LogonDate
+                                      ,[Is_Succesful] = @IsSuccesful
                                           WHERE Id=@Id";
                     cmd.Parameters.AddWithValue("@Id", poco.Id);
                     conn.Open();
